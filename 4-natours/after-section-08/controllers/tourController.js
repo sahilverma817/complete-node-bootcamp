@@ -178,7 +178,7 @@ exports.getMonthlyPlan = async (req, res) => {
       },
       {
         $project: {
-          _id: 0
+          _id: 0 //Whether to send id in res or not; 0 for not and 1 for yes
         }
       },
       {

@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+
+//This dotenv.config is wriiten before requiring app because we need env variables in app.js so have to import it befor app
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });

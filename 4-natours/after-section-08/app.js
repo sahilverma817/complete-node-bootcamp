@@ -20,7 +20,11 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
+  // console.log(req.requestTime);
+  // Prints undefined
   req.requestTime = new Date().toISOString();
+  // console.log(req.requestTime);
+  // prints the current time
   next();
 });
 
@@ -28,4 +32,5 @@ app.use((req, res, next) => {
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
+// 4) app.use() documentation: https://www.geeksforgeeks.org/express-js-app-use-function/
 module.exports = app;
